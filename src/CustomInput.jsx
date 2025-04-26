@@ -1,19 +1,22 @@
+// src/CustomInput.jsx
 import React from 'react';
 
-const CustomInput = ({ label, name, type, id, value, onChange }) => {
+function CustomInput({ label, name, type, id, value, onChange }) {
   return (
-    <div className="input-group" style={{ marginBottom: '1rem' }}>
-      <label htmlFor={id} style={{ display: 'block', marginBottom: '0.5rem' }}>{label}</label>
+    <div style={{ marginBottom: '10px' }}>
+      <label htmlFor={id} style={{ display: 'block', marginBottom: '5px' }}>
+        {label}
+      </label>
       <input
         id={id}
         name={name}
         type={type}
         value={value}
         onChange={onChange}
-        style={{ padding: '0.5rem', width: '100%' }}
+        style={{ padding: '8px', width: '100%' }}
       />
     </div>
   );
-};
+}
 
 export default CustomInput;
